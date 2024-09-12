@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!--
+    What is Bootstrap?
+    Bootstrap is a free front-end framework for faster and easier web development.
+    Bootstrap includes HTML and CSS based design templates, as well as optional JavaScript plugins.
+    Bootstrap also gives you the ability to easily create responsive designs.
+    -->
+    <!--
+    Bootstrap Versions
+    Bootstrap 5 (released 2021) is the newest version of Bootstrap (released 2013); 
+    with new components, faster stylesheet and more responsiveness.
+    -->
+    <!--
+    Why Use Bootstrap?
+    Advantages of Bootstrap:
+    Easy to use: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap.
+    Responsive features: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops.
+    Mobile-first approach: In Bootstrap, mobile-first styles are part of the core framework.
+    Browser compatibility: Bootstrap 5 is compatible with all modern browsers.
+    -->
+    <!--
+    Where to Get Bootstrap 5?
+    There are two ways to start using Bootstrap 5 on your own web site.
+    Include Bootstrap 5 from a CDN
+    Download Bootstrap 5 from getbootstrap.com
+    -->
+    <!--
+    Create Your First Web Page With Bootstrap 5
+    1. Add the HTML5 doctype
+    2. Bootstrap 5 is mobile-first
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    3. Containers
+    There are two container classes to choose from:
+    3.1. The .container class provides a responsive fixed width container
+    <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container class.</p>
+        <p>The .container class provides a responsive fixed width container.</p>
+    </div>
+    3.2. The .container-fluid class provides a full width container, spanning the entire width of the viewport
+    <div class="container-fluid">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container-fluid class.</p>
+        <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>
+    </div>
+    -->
+    <!--
+    Bootstrap 5 Grid System:
+    Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page.
+    The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.
+    Make sure that the sum adds up to 12.
+    -->
+    <!--
+    Grid Classes
+    The Bootstrap 5 grid system has six classes:
+    .col- (extra small devices - screen width less than 576px)
+    .col-sm- (small devices - screen width equal to or greater than 576px)
+    .col-md- (medium devices - screen width equal to or greater than 768px)
+    .col-lg- (large devices - screen width equal to or greater than 992px)
+    .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+    .col-xxl- (xxlarge devices - screen width equal to or greater than 1400px)
+    -->
+    <!--
+    Basic Structure of a Bootstrap 5 Grid
+    1. Control the column width, and how they should appear on different devices
+    <div class="row">
+        <div class="col-*-*"></div>
+        <div class="col-*-*"></div>
+    </div>
+    <div class="row">
+        <div class="col-*-*"></div>
+        <div class="col-*-*"></div>
+        <div class="col-*-*"></div>
+    </div>
+    The first star (*) represents the responsiveness: sm, md, lg, xl or xxl, 
+    while the second star represents a number, which should add up to 12 for each row.
+    2. Or let Bootstrap automatically handle the layout
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+    </div>
+    instead of adding a number to each col, let bootstrap handle the layout, 
+    to create equal width columns: two "col" elements = 50% width to each col, 
+    while three cols = 33.33% width to each col. 
+    Four cols = 25% width, etc. 
+    You can also use .col-sm|md|lg|xl|xxl to make the columns responsive.
+    -->
+    <!--Grids Examples-->
+    <div class="container-fluid">
+        <!--Three Equal Columns-->
+        <div class="row">
+            <div class="col p-3 bg-primary text-white">.col</div>
+            <div class="col p-3 bg-dark text-white">.col</div>
+            <div class="col p-3 bg-primary text-white">.col</div>
+        </div>
+        <p>Note: Try to add a new div with class="col" inside the row class - this will create four equal-width columns.</p>
+        <!--Responsive Columns-->
+        <div class="row">
+            <div class="col-sm-3">.col-sm-3</div>
+            <div class="col-sm-3">.col-sm-3</div>
+            <div class="col-sm-3">.col-sm-3</div>
+            <div class="col-sm-3">.col-sm-3</div>
+        </div>
+        <!--Two Unequal Responsive Columns-->
+        <div class="row">
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-8">.col-sm-8</div>
+        </div>
+
+        <!--Typography-->
+            <!--Headings-->
+            <p class="h1">h1 Bootstrap heading</p>
+            <p class="h2">h2 Bootstrap heading</p>
+            <p class="h3">h3 Bootstrap heading</p>
+            <p class="h4">h4 Bootstrap heading</p>
+            <p class="h5">h5 Bootstrap heading</p>
+            <p class="h6">h6 Bootstrap heading</p>
+            <!--Display Headings-->
+            <p>Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight):</p>
+            <h1 class="display-1">Display 1</h1>
+            <h1 class="display-2">Display 2</h1>
+            <h1 class="display-3">Display 3</h1>
+            <h1 class="display-4">Display 4</h1>
+            <h1 class="display-5">Display 5</h1>
+            <h1 class="display-6">Display 6</h1>
+            <!--Small-->
+            <p>The small element (and the .small class) is used to create a smaller, secondary text in any heading:</p>       
+            <h1>h1 heading <small>secondary text</small></h1>
+            <h2>h2 heading <small>secondary text</small></h2>
+            <h3>h3 heading <small>secondary text</small></h3>
+            <h4>h4 heading <small>secondary text</small></h4>
+            <h5>h5 heading <small>secondary text</small></h5>
+            <h6>h6 heading <small>secondary text</small></h6>
+            <!--Mark-->
+            <p>Use the mark element (or the .mark class) to <mark>highlight</mark> text.</p>
+            <!--Abbreviations-->
+            <p>The abbr element is used to mark up an abbreviation or acronym:</p>
+            <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+            <!--Blockquotes-->
+            <p>The blockquote element is used to present content from another source:</p>
+            <blockquote class="blockquote">
+                <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+                <footer class="blockquote-footer">From WWF's website</footer>
+            </blockquote>
+            <!--Description Lists-->
+            <p>The dl element indicates a description list:</p>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+            </dl>
+            <!--Code Snippets-->
+            <p>Inline snippets of code should be embedded in the code element:</p>
+            <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
+            <!--Keyboard Inputs-->
+            <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+            <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+            <!--Text Align-->
+            <p class="text-start">Left-aligned text.</p>
+            <p class="text-end">Right-aligned text.</p>      
+            <p class="text-center">Center-aligned text.</p>
+            <!--Text Decoration-->
+            <p>Use the .text-decoration-none class to remove the underline from a link.</p>
+            <a href="#" class="text-decoration-none">A link without underline.</a>
+            <!--Sentence Case-->
+            <p class="text-lowercase">Lowercased text.</p>
+            <p class="text-uppercase">Uppercased text.</p>      
+            <p class="text-capitalize">Capitalized text.</p>
+            <!--list-unstyled-->
+            <p>The class .list-unstyled removes the default list-style and left margin on list items (immediate children only):</p>
+            <ul class="list-unstyled">
+                <li>Coffee</li>
+                <li>Tea
+                <ul>
+                    <li>Black tea</li>
+                    <li>Green tea</li>
+                </ul>
+                </li>
+                <li>Milk</li>
+            </ul>
+            <!--list-inline-->
+            <p>The class .list-inline places all list items on a single line, when used together with the .list-inline-item:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">Coffee</li>
+                <li class="list-inline-item">Tea</li>
+                <li class="list-inline-item">Milk</li>
+            </ul>
+        
+        <!--Colors-->
+            <!--Text Colors-->
+            <p>Use the contextual classes to provide "meaning through colors":</p>
+            <p class="text-muted">This text is muted.</p>
+            <p class="text-primary">This text is important.</p>
+            <p class="text-success">This text indicates success.</p>
+            <p class="text-info">This text represents some information.</p>
+            <p class="text-warning">This text represents a warning.</p>
+            <p class="text-danger">This text represents danger.</p>
+            <p class="text-secondary">Secondary text.</p>
+            <p class="text-dark">This text is dark grey.</p>
+            <p class="text-body">Default body color (often black).</p>
+            <p class="text-light">This text is light grey (on white background).</p>
+            <p class="text-white">This text is white (on white background).</p>
+            <!--Background Colors-->
+            <p>Use the contextual background classes to provide "meaning through colors".</p>
+            <div class="bg-primary p-3"></div>
+            <div class="bg-success p-3"></div>
+            <div class="bg-info p-3"></div>
+            <div class="bg-warning p-3"></div>
+            <div class="bg-danger p-3"></div>
+            <div class="bg-secondary p-3"></div>
+            <div class="bg-dark p-3"></div>
+            <div class="bg-light p-3"></div>
+            <!--Background Color with Contrasting Text Color-->
+            <h2>Background Color with Contrasting Text Color</h2>
+            <p class="text-bg-primary">This text is important.</p>
+            <p class="text-bg-success">This text indicates success.</p>
+            <p class="text-bg-info">This text represents some information.</p>
+            <p class="text-bg-warning">This text represents a warning.</p>
+            <p class="text-bg-danger">This text represents danger.</p>
+            <p class="text-bg-secondary">Secondary background color.</p>
+            <p class="text-bg-dark">Dark grey background color.</p>
+            <p class="text-bg-light">Light grey background color.</p>
+            
+        <!--Images-->
+            <!--Rounded Corners-->
+            <img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre">
+            <!--Circle-->
+            <img src="cinqueterre.jpg" class="rounded-circle" alt="Cinque Terre" width="" height="">
+            <!--Bordered-->
+            <img src="cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre">
+            <!--Aligning Images-->
+            <img src="paris.jpg" class="float-start" alt="Paris"> 
+            <img src="paris.jpg" class="float-end" alt="Paris">
+            <!--Centered Image-->
+            <!--Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block)-->
+            <img src="paris.jpg" class="mx-auto d-block" style="width:50%"> 
+            <!--Responsive Images-->
+            <img class="img-fluid" src="ny.jpg" alt="New York" width="1100" height="500"> 
+            <br><br>
+                
+        <!--Buttons-->
+            <!--Button Styles-->
+            <button type="button" class="btn">Basic</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-link">Link</button>
+            <br><br>
+            <!--Button Elements-->
+            <a href="#" class="btn btn-success">Link Button</a>
+            <button type="button" class="btn btn-success">Button</button>
+            <input type="button" class="btn btn-success" value="Input Button">
+            <input type="submit" class="btn btn-success" value="Submit Button">
+            <input type="reset" class="btn btn-success" value="Reset Button">
+            <br><br>
+            <!--Button Outline-->
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+            <button type="button" class="btn btn-outline-light text-dark">Light</button>
+            <br><br>
+            <!--Button Sizes-->
+            <button type="button" class="btn btn-primary btn-lg">Large</button>
+            <button type="button" class="btn btn-primary">Default</button>
+            <button type="button" class="btn btn-primary btn-sm">Small</button>
+            <br><br>
+            <!--Block Level Buttons-->
+            <p>To create a block level button that spans the entire width of the parent element, use the .d-grid "helper" class on the parent element:</p>
+            <div class="d-grid">
+                <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+            </div>
+            <br><br>
+            <p>If you have many block-level buttons, you can control the space between them with the .gap-* class:</p>
+            <div class="d-grid gap-3">
+                <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+                <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+                <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+            </div>
+            <br><br>
+            <!--Active/Disabled Buttons-->
+            <button type="button" class="btn btn-primary active">Active Primary</button>
+            <button type="button" class="btn btn-primary" disabled>Disabled Primary</button>
+            <a href="#" class="btn btn-primary disabled">Disabled Link</a>
+            <br><br>
+            <!--Spinner Buttons-->
+            <button class="btn btn-primary">
+                <span class="spinner-border spinner-border-sm"></span>
+            </button>
+            <button class="btn btn-primary">
+                <span class="spinner-border spinner-border-sm"></span>
+                Loading..
+            </button>
+            <button class="btn btn-primary" disabled>
+                <span class="spinner-border spinner-border-sm"></span>
+                Loading..
+            </button>
+            <button class="btn btn-primary" disabled>
+                <span class="spinner-grow spinner-grow-sm"></span>
+                Loading..
+            </button>
+            <br><br>
+            <!--Button Groups-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+            <br><br>
+            <!--Sizes-->
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+            <br><br>
+            <!--Vertical Button Groups-->
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+            <br><br>
+            <!--Nesting Button Groups & Dropdown Menus-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Tablet</a>
+                    <a class="dropdown-item" href="#">Smartphone</a>
+                  </div>
+                </div>
+            </div>
+            <br><br>
+        
+        <!--Tables-->
+        
+        <!--Jumbotron-->
+
+        <!--Alerts-->
+
+        <!--Badges-->
+
+        <!--Progress Bars-->
+
+        <!--Spinners-->
+
+        <!--Pagination-->
+
+        <!--List -->
+
+        <!--Cards-->
+
+        <!--Dropdowns-->
+
+        <!--Collapse-->
+
+        <!--Navs-->
+
+        <!--Carousel-->
+
+        <!--Modal-->
+
+        <!--Tooltip-->
+
+        <!--Popover-->
+
+        <!--Toasts-->
+
+        <!--Scrollspy-->
+
+        <!--Offcanvas-->
+
+        <!--Utilities-->
+
+        <!--Dark Mode-->
+
+        <!--Flex-->
+
+        <!--Forms-->
+
+
+    </div>
+</body>
+</html>
